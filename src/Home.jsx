@@ -77,7 +77,7 @@ export default function Home({
       objectsFromToday.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       return objectsFromToday[0].quote;
     } else {
-      return "You haven't wrote your quote of the day!";
+      return "You haven't added your quote of the day!";
     }
   }
 

@@ -42,7 +42,12 @@ export default function DisplaySchedule({
 
     return (
         <div>
-            {scheduleToday.map((element, index) => (
+            { 
+            scheduleToday.length === 0 
+            ?
+            (<p>You haven't added your schedule for today</p>)
+            :
+            (scheduleToday.map((element, index) => (
                 <Container key={index} className="d-flex">
                     <InputGroup className="mb-3">
                         <InputGroup.Text>
@@ -73,7 +78,7 @@ export default function DisplaySchedule({
                         </Button>
                     </InputGroup>
                 </Container>
-            ))}
+            )))}
 
             <EditSchedule
                 showModal={editSchedule}

@@ -21,9 +21,14 @@ export default function DisplayToDo({  setTodos, deleteCompletedTodo }) {
     }, [])
 
   return (
-    <div
-    >
-      {todosFromToday.map((todo, index) => (
+    <div>
+      
+      {
+      todosFromToday.length === 0 
+      ?
+      (<p>No todos created today.</p>)
+      :
+      (todosFromToday.map((todo, index) => (
         <InputGroup className="mb-3" key={index}>
           <InputGroup.Checkbox
             aria-label="Checkbox for following text input"
@@ -43,7 +48,7 @@ export default function DisplayToDo({  setTodos, deleteCompletedTodo }) {
             x
           </Button>
         </InputGroup>
-      ))}
+      )))}
     </div>
   );
 }
