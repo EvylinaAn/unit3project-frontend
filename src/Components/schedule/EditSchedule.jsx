@@ -29,6 +29,8 @@ export default function Schedule({ showModal, handleClose, selectedScheduleId })
         }
     }
 
+    
+
     async function handleSubmit(e) {
         try {
             await editSchedule(selectedScheduleId, {

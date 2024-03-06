@@ -2,7 +2,7 @@ import {InputGroup, Form, Button} from "react-bootstrap";
 import { useToDos } from "../../context/ToDosContext";
 import { useEffect } from "react";
 
-export default function DisplayToDo({  setTodos, deleteCompletedTodo }) {
+export default function DisplayToDo({ setTodos, deleteCompletedTodo }) {
   const {handleCheckboxChange, handleInputChange, deleteTodo, todos, fetchData} = useToDos()
     //   console.log(todos);
     const today = new Date();

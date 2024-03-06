@@ -11,7 +11,7 @@ export function useToDos() {
 export function ToDosProvider({ children }) {
   const { user } = useUser();
   const [groupedTodos, setGroupedTodos] = useState({});
-  
+
   const [todos, setTodos] = useState([
     {
       todo: "",
@@ -77,21 +77,21 @@ export function ToDosProvider({ children }) {
   }
 
   function handleCheckboxChange(id) {
-    const updatedTodos = [...todos]
-    const todo = updatedTodos.find(t => t._id === id)
-    todo.completed = !todo.completed
-    setTodos(updatedTodos)
-    updateTodoOnServer(todo)
-    console.log(todo)
+    const updatedTodos = [...todos];
+    const todo = updatedTodos.find((t) => t._id === id);
+    todo.completed = !todo.completed;
+    setTodos(updatedTodos);
+    updateTodoOnServer(todo);
+    console.log(todo);
   }
 
   function handleInputChange(id, newValue) {
-    const updatedTodos = [...todos]
-    const todo = updatedTodos.find(t => t._id === id)
-    todo.todo = newValue
-    setTodos(updatedTodos)
-    updateTodoOnServer(todo)
-    console.log(todo)
+    const updatedTodos = [...todos];
+    const todo = updatedTodos.find((t) => t._id === id);
+    todo.todo = newValue;
+    setTodos(updatedTodos);
+    updateTodoOnServer(todo);
+    console.log(todo);
   }
 
   async function updateTodoOnServer(updatedTodo) {
@@ -117,7 +117,7 @@ export function ToDosProvider({ children }) {
         `${process.env.REACT_APP_BACKEND_URL}/todos/${todoId}`
       );
       deleteCompletedTodo(index);
-      await fetchData()
+      await fetchData();
     } catch (e) {
       console.error(e);
     }

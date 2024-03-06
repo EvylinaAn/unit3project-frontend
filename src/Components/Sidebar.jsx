@@ -37,7 +37,6 @@ export default function Sidebar({ handleLogout, user }) {
             </p>
           </div>
         </CDBSidebarHeader>
-
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
             <NavLink to="/"  >
