@@ -11,13 +11,14 @@ export function UsersProvider({ children }) {
   const [user, setUser] = useState(null);
 
   const googleAuth = useCallback(() => {
-    window.open(
+    const result = window.open(
       `${process.env.REACT_APP_AUTH_URL}/auth/google/callback`,
-      "_self"
-    );
+      "_self",    
+      );
+      console.log(result)
   }, []);
 
-  async function getUser() {
+  const getUser = async () => {
     try {
       const url = `${process.env.REACT_APP_AUTH_URL}/auth/login/success`;
       const { data } = await axios.get(url, { withCredentials: true });

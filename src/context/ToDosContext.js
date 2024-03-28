@@ -26,7 +26,6 @@ export function ToDosProvider({ children }) {
   });
 
   const fetchData = useCallback(async () => {
-    // console.log("fetching");
     try {
       const response = await axios.get(
         `${process.env.REACT_APP_BACKEND_URL}/todos`,
@@ -39,7 +38,6 @@ export function ToDosProvider({ children }) {
       );
       const result = response.data;
       setTodos(result);
-      // console.log(result);
     } catch (e) {
       console.error(e);
     }
