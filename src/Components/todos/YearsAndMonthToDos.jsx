@@ -12,7 +12,6 @@ export default function YearsAndMonthToDos() {
     sortMonthsAndDays,
     todos,
     fetchData,
-    
   } = useToDos();
 
   useEffect(() => {
@@ -28,12 +27,23 @@ export default function YearsAndMonthToDos() {
   }, [todos]);
 
   return (
-    <div className="d-flex flex-column align-items-center" style={{ width: "100%" }}>
-      <h1 className="p-3 mt-3" style={{ color: "#3a7e54", fontSize: 40}}>All To-Do's</h1>
+    <div
+      className="d-flex flex-column align-items-center"
+      style={{ width: "100%" }}
+    >
+      <h1 className="p-3 mt-3" style={{ color: "#3a7e54", fontSize: 40 }}>
+        All To-Do's
+      </h1>
       <Container className="d-flex flex-column">
         {Object.entries(groupedTodos).length === 0 ? (
           <div className="mt-5">
-            <p>You have nothing to Display, start creating your todo's by going <Link to="/" style={{textDecoration: 'none'}}>home</Link> and adding To-Do.  </p>
+            <p>
+              You have nothing to Display, start creating your todo's by going{" "}
+              <Link to="/" style={{ textDecoration: "none" }}>
+                home
+              </Link>{" "}
+              and adding To-Do.{" "}
+            </p>
           </div>
         ) : (
           Object.entries(groupedTodos).map(([year, months]) => (
@@ -48,7 +58,11 @@ export default function YearsAndMonthToDos() {
                       <div>
                         <Accordion.Header>{month}</Accordion.Header>
                         <Accordion.Body>
-                          <AllTodosInDays month={month} year={year} days={days} />
+                          <AllTodosInDays
+                            month={month}
+                            year={year}
+                            days={days}
+                          />
                         </Accordion.Body>
                       </div>
                     </Accordion.Item>

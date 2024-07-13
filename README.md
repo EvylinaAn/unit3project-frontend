@@ -84,14 +84,14 @@ Must be presented with a smooth UI and everyone in the team must collaborate tow
 
 We spent the first couple of days coming up with project ideas, pitching them to our group and finally deciding on what to go for. 
 
-![alt text](../unit3project-frontend/public/assets/IMG_8900.jpg)
+![inspiration picture](../unit3project-frontend/public/assets/IMG_8900.jpg)
 
 We chose to do a day planner which was an inspiration that came to me as I’ve had a planner for nearly 2 years now and it changed my life, unfortunately like any book it ran out of pages and I thought how nice it would be to have this in a digital format that anyone can access, especially if one is struggling with building or maintaining a routine.
 
 We then agreed on the layout of styles and tasks each person in the team was going to lead. The application consisted of 3 main data models including a To-Do, a Daily checker and a Schedule model.
 
-![alt text](../unit3project-frontend/public/assets/img2.png)
-![alt text](../unit3project-frontend/public/assets/img3.png)
+![layout of plan](../unit3project-frontend/public/assets/img2.png)
+![layout of plan](../unit3project-frontend/public/assets/img3.png)
 
 ### Build/Code Process
 

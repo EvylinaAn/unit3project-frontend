@@ -57,9 +57,9 @@ export default function YearsAndMonthDailies() {
                     <Accordion.Header>{month}</Accordion.Header>
                     <Accordion.Body>
                       <AllDailiesInDays
-                        dates={dates}
-                        year={year}
                         month={month}
+                        year={year}
+                        dates={dates}
                       />
                     </Accordion.Body>
                   </Accordion.Item>
